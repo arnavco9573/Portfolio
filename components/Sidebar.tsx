@@ -1,5 +1,4 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { PiBooksDuotone } from "react-icons/pi";
 import { Avatar } from "@heroui/avatar";
 import ListBoxWrapper from "@/components/ui/ListboxWrapper";
@@ -13,7 +12,7 @@ export default function Sidebar() {
         <Avatar
           isBordered
           radius="sm"
-          color="success"
+          color="primary"
           className="w-[7rem] h-[7rem] text-large"
           src="avatar.jpg"
         />
@@ -24,8 +23,8 @@ export default function Sidebar() {
         <div className="text-left mt-1">
           <h2 className="text-xl text-gray-300 flex align-middle items-center gap-3 ">
             {" "}
-            <span className="text-blue-600 ">
-              <PiBooksDuotone  className="w-7 h-7"/>
+            <span className="text-sky-400 ">
+              <PiBooksDuotone  className="w-7 h-7 "/>
             </span>{" "}
             Education
           </h2>
