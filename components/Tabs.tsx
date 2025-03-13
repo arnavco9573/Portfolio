@@ -53,7 +53,7 @@ export default function App() {
       company: "HecDec",
       role: "Junior Frontend Developer",
       link: "https://drive.google.com/file/d/1zDOYIV7qaEphGHznxM8zTOr6jsSsluZu/view?usp=drive_link",
-      duration: "June 2024 - August 2024",
+      duration: "June 2023 - August 2023",
       description: [
         "Designed a front-end of EdTech Website with React.js front-end and a Tailwind CSS for the sleek and responsive design. Role included Front-end Development of Figma design.  ",
         "Optimized database queries improving performance by 40%",
