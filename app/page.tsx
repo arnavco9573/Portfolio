@@ -46,14 +46,7 @@ export default function Home() {
         <div className="mt-3">
           <Tabs />
         </div>
-      </div>
-
-      {/* Skills Card - Fixed on the Right */}
-      <div className="hidden lg:block absolute right-10 top-[19.25rem] w-80 p-2 bg-white bg-opacity-5 shadow-lg rounded-lg">
-        <h2 className="text-lg font-bold text-white mb-2 p-2">What I Know!</h2>
-        <SkillsCard />
-      </div>
-
+      </div>  
       <div>
         <BottomNavigation />
       </div>

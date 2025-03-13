@@ -4,6 +4,7 @@ import { ExperienceCard } from "./ui/ExperienceCard";
 import { ProjectCard } from "./ui/ProjectCard";
 import { FaDownload } from "react-icons/fa";
 import { useState } from "react";
+import SkillsCard from "./SkillsCard";
 
 export default function App() {
   const resumeUrl = "/resume.pdf";
@@ -28,7 +29,7 @@ export default function App() {
     {
       company: "Mylamp.ai",
       role: "Web Developer Intern",
-      link:"https://drive.google.com/file/d/1BniRBJJ9d70uaGg-JITsc7fEiyE4qdBJ/view?usp=sharing",
+      link: "https://drive.google.com/file/d/1BniRBJJ9d70uaGg-JITsc7fEiyE4qdBJ/view?usp=sharing",
       duration: "June 2024 - August 2024 ",
       description: [
         "Designed and implemented RESTful API endpoints utilizing TypeScript, which increased response times by 25%",
@@ -113,7 +114,13 @@ export default function App() {
   ];
   return (
     <div className="flex w-full flex-col max-w-[52rem] mb-10 md:mb-1">
-      <Tabs key="success" color="success" aria-label="Options" variant="underlined" className="" >
+      <Tabs
+        key="success"
+        color="success"
+        aria-label="Options"
+        variant="underlined"
+        className=""
+      >
         <Tab key="Experience" title="Experience">
           <div className="mt-4">
             {experiences.map((exp, index) => (
@@ -122,7 +129,13 @@ export default function App() {
           </div>
         </Tab>
         <Tab key="Projects" title="Projects">
-          <Tabs key="success" color="success" aria-label="Options" variant="underlined" className="flex sm:flex-wrap">
+          <Tabs
+            key="success"
+            color="success"
+            aria-label="Options"
+            variant="underlined"
+            className="flex sm:flex-wrap"
+          >
             <Tab key="Web Dev Projects" title="Web Dev Projects">
               <div className="mt-4">
                 {webprojects.map((pro, index) => (
@@ -138,6 +151,12 @@ export default function App() {
             </Tab>
           </Tabs>
         </Tab>
+        <Tab key="Skills" title="Skills">
+          <h2 className="text-lg font-bold text-white mb-2 p-2">
+            What I Know!
+          </h2>
+          <SkillsCard />
+        </Tab>
         <Tab key="Resume" title="Resume">
           <div className="mt-5 items-left ml-3">
             <h2 className="text-lg font-semibold mb-2">
@@ -150,7 +169,7 @@ export default function App() {
               onPress={handleDownload}
               variant="bordered"
             >
-              {isLoading ? <Spinner/> : "Download"}
+              {isLoading ? <Spinner /> : "Download"}
             </Button>
           </div>
         </Tab>

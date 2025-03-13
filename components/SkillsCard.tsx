@@ -21,7 +21,7 @@ const skills = {
 
 export default function SkillsCard() {
   return (
-    <Card className="bg-opacity-5 text-white shadow-lg rounded-lg p-2">
+    <Card className="bg-opacity-20 text-white shadow-lg rounded-lg p-2">
       <CardBody>
         {Object.entries(skills).map(([category, items]) => (
           <div key={category} className="mb-2">

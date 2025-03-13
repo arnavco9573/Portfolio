@@ -43,30 +43,6 @@ export default function BottomNavigation() {
     <>
       {/* Bottom Navigation */}
       <div className="fixed bottom-0 left-0 w-full bg-white bg-opacity-5 backdrop-blur-md shadow-md p-2 flex justify-evenly items-center lg:hidden">
-        {/* Skills Button */}
-        <Button className="" onPress={skillsModal.onOpen} variant="light">
-          <div className="flex flex-col items-center text-white">
-            <SiHyperskill size={20} className="text-xl" />
-            <span className="text-xs mt-1">Skills</span>
-          </div>
-        </Button>
-
-        {/* Skills Modal */}
-        <Modal
-          placement="center"
-          isOpen={skillsModal.isOpen}
-          onOpenChange={skillsModal.onOpenChange}
-          className="w-[25rem]"
-        >
-          <ModalContent>
-            <ModalHeader className="flex flex-col gap-1">
-              What I Know
-            </ModalHeader>
-            <ModalBody>
-              <SkillsCard />
-            </ModalBody>
-          </ModalContent>
-        </Modal>
 
         {/* Profile Button */}
         <div
