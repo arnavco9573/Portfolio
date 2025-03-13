@@ -4,7 +4,10 @@ import clsx from "clsx";
 import { Providers } from "./providers";
 import { fontSans } from "@/config/fonts";
 
-export const metadata: Metadata = {};
+export const metadata: Metadata = {
+  title: "Portfolio",
+};
+
 
 export const viewport: Viewport = {
   themeColor: [

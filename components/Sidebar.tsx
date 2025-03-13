@@ -6,12 +6,12 @@ import SocialLinks from "./ui/SocialLinks";
 
 export default function Sidebar() {
   return (
-    <div className="w-72 h-[95vh] bg-white bg-opacity-5 backdrop-blur-lg flex flex-col gap-1 relative m-3 rounded-lg p-4">
+    <div className="w-[22rem] md:w-72 h-[95vh] bg-white bg-opacity-5 backdrop-blur-lg flex flex-col gap-1 relative m-3 rounded-lg p-4 mb-8 md:mb-1 scrollbar-hide">
       {/* Profile Section */}
       <div className="text-center flex gap-2 flex-col items-center">
         <Avatar
           isBordered
-          radius="sm"
+          radius="full"
           color="primary"
           className="w-[7rem] h-[7rem] text-large"
           src="avatar.jpg"

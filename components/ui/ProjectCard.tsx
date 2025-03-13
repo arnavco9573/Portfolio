@@ -4,6 +4,10 @@ import { SlCalender } from "react-icons/sl";
 import { FaCircle } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 
+const chipColors: Array<
+  "primary" | "secondary" | "success" | "warning" | "danger" | "default"
+> = ["primary", "secondary", "success", "warning", "danger", "default"];
+
 interface ProjectProps {
   project: string;
   link: string;
@@ -29,9 +33,9 @@ export function ProjectCard({
         <div className="flex justify-between items-start mb-2">
           <div>
             <h3 className="text-xl font-bold">{project}</h3>
-            <Link href={link} color="secondary" className="mt-1"><FiGithub/></Link>
+            <Link href={link} color="secondary" className="mt-1 text-xl"><FiGithub/></Link>
           </div>
-          <div className="flex items-center text-default-500">
+          <div className="flex md:flex-col items-center gap-2 text-gray-300">
             <SlCalender className="w-4 h-4 mr-1" />
             <span className="text-sm">{duration}</span>
           </div>
@@ -47,8 +51,8 @@ export function ProjectCard({
           ))}
         </div>
         <div className="flex flex-wrap gap-2 mt-3">
-          {skills.map((skill) => (
-            <Chip key={skill} size="sm" variant="flat" color="primary">
+          {skills.map((skill,index) => (
+            <Chip key={skill} size="sm" variant="flat" color={chipColors[index % chipColors.length]}>
               {skill}
             </Chip>
           ))}

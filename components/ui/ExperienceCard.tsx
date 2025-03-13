@@ -1,11 +1,17 @@
 import React from "react";
-import { Card, CardBody, Chip } from "@heroui/react";
+import { Card, CardBody, Chip, Link } from "@heroui/react";
 import { SlCalender } from "react-icons/sl";
 import { FaCircle } from "react-icons/fa";
+import { GoLinkExternal } from "react-icons/go";
+
+const chipColors: Array<
+  "primary" | "secondary" | "success" | "warning" | "danger" | "default"
+> = ["primary", "secondary", "success", "warning", "danger", "default"];
 
 interface ExperienceProps {
   company: string;
   role: string;
+  link: string;
   duration: string;
   description: string[];
   skills: string[];
@@ -14,6 +20,7 @@ interface ExperienceProps {
 export function ExperienceCard({
   company,
   role,
+  link,
   duration,
   description,
   skills,
@@ -26,11 +33,17 @@ export function ExperienceCard({
     >
       <CardBody className="p-5">
         <div className="flex justify-between items-start mb-2">
-          <div>
-            <h3 className="text-xl font-bold">{company}</h3>
-            <p className="text-default-600 font-medium">{role}</p>
+          <div className="flex flex-wrap md:flex-col">
+            <h3 className="text-xl font-bold mb-1">{company}</h3>
+            <p className="text-default-600 font-medium mb-1">{role}</p>
+            <Link href={link} className="text-default-600 font-medium gap-2">
+              Certificate Link{" "}
+              <span>
+                <GoLinkExternal />
+              </span>
+            </Link>
           </div>
-          <div className="flex items-center text-default-500">
+          <div className="md:flex md:flex-row flex flex-col  gap-2 items-center text-default-500">
             <SlCalender className="w-4 h-4 mr-1" />
             <span className="text-sm">{duration}</span>
           </div>
@@ -46,8 +59,14 @@ export function ExperienceCard({
           ))}
         </div>
         <div className="flex flex-wrap gap-2 mt-3">
-          {skills.map((skill) => (
-            <Chip key={skill} size="sm" variant="flat" color="primary">
+          {skills.map((skill, index) => (
+            <Chip
+              color={chipColors[index % chipColors.length]}
+              key={skill}
+              size="sm"
+              variant="flat"
+              
+            >
               {skill}
             </Chip>
           ))}

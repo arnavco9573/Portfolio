@@ -9,17 +9,17 @@ export default function SocialLinks() {
   const socialLinks = [
     {
       name: "GitHub",
-      url: "https://github.com",
+      url: "https://github.com/arnavco9573",
       icon: <FiGithub className="h-7 w-7 text-pink-400 transition-transform -translate-y-1 group-hover:-translate-y-2" />,
     },
     {
       name: "Twitter",
-      url: "https://twitter.com",
+      url: "https://x.com/arnavsharm098",
       icon: <BsTwitterX className="h-7 w-7 text-gray-400 transition-transform -translate-y-1 group-hover:-translate-y-2" />,
     },
     {
       name: "LinkedIn",
-      url: "https://linkedin.com",
+      url: "https://www.linkedin.com/in/arnav-sharma-212944257/",
       icon: <SlSocialLinkedin className="h-7 w-7 text-blue-600 transition-transform -translate-y-1 group-hover:-translate-y-2" />,
     },
   ];
